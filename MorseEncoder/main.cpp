@@ -265,7 +265,7 @@ char* encode(char ULetter)
  *
  * @param ULetter Char to be added
  * @param previousLetter pointer to the previously added letter (defaults to NULL pointer, i.e. can be used to initialize linked list)
- * @return A pointer to a new letter
+ * @return A pointer to a the added letter
  */
 Letter addLetter(char ULetter, Letter previousLetter = {}) // ULetter = unencoded letter, ascii
 {
