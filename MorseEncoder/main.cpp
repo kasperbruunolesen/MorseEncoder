@@ -308,10 +308,14 @@ void printSentence(Letter myLetter)
  */
 Letter deleteAll (Letter myLetter)
 {
-        Letter tmpNext = myLetter->next;
-        free(myLetter);
-        if(tmpNext)
+    Letter tmpNext = myLetter->next;
+        while(myLetter)
+        {
+            free(myLetter);
             myLetter = tmpNext;
+            if(tmpNext) // If tmpNext is already null, we are done
+            tmpNext = myLetter->next;
+        }
     return {};
 }
     
